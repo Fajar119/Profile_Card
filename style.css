@@ -1,0 +1,105 @@
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+    width:100%;height:100vh;
+    display:flex;justify-content:center;align-items:center;
+    overflow:hidden;background:#000;
+    font-family:'Outfit',sans-serif;
+}
+
+body{
+    width:100%;height:100vh;
+    display:flex;justify-content:center;align-items:center;
+    overflow:hidden;
+    background: url('WhatsApp\ Image\ 2026-10-15\ at\ 19.42.33.jpeg') no-repeat center center;
+    background-size: cover;
+    font-family:'Outfit',sans-serif;
+    position: relative;
+}
+
+/* Overlay gelap tipis biar card tetep keliatan */
+body::before{
+    content:"";
+    position:fixed;top:0;left:0;
+    width:100%;height:100%;
+    background:rgba(0,0,0,0.25);
+    z-index:-1;
+}
+
+#card{
+    position:relative;
+    width:360px;
+    border-radius:22px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(22px) saturate(160%);
+    -webkit-backdrop-filter:blur(22px) saturate(160%);
+    border:1px solid rgba(255,255,255,0.15);
+    overflow:visible;
+    z-index:1;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;}
+
+.header{
+    width:100%;height:170px;
+    border-radius:22px 22px 0 0;
+    overflow:hidden;background:#000;
+}
+.header-video{width:100%;height:100%;object-fit:cover;display:block}
+
+.profile-wrap{
+    position:relative;
+    margin-top:-45px;
+    display:flex;
+    justify-content:center;
+}
+.avatar-frame{
+    width:84px;height:84px;
+    border-radius:50%;
+    padding:3px;
+    background-color: lime;
+    box-shadow:0 0 20px rgb(0,255,0);
+}
+.avatar{
+    width:100%;height:100%;
+    border-radius:50%;object-fit:cover;
+    border:3px solid #111;
+    display:block;
+}
+
+.content{
+    padding:12px 22px 22px 22px;
+    text-align:center;
+}
+.name-row{
+    display:flex;align-items:center;justify-content:center;
+    gap:6px;margin-top:6px
+}
+.name-row h3{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:21px;font-weight:700;color:#fff;
+}
+.verified{
+    width:18px;height:18px;
+    background:#2788ce;color:#fff;
+    border-radius:50%;font-size:11px;
+    display:flex;justify-content:center;align-items:center;
+}
+.username{
+    font-size:13px;color:rgba(255,255,255,0.6);
+    margin-top:2px;margin-bottom:16px;
+}
+.about-label{
+    font-size:11px;font-weight:600;
+    color:rgba(255,255,255,0.9);display:block;margin-bottom:6px;
+    letter-spacing:1px;text-transform:uppercase;
+}
+.about-text{
+    font-size:12.5px;line-height:1.5;
+    color:rgba(255,255,255,0.65);
+}
+.stats{
+    display:flex;justify-content:space-between;
+    margin-top:20px;
+    border-top:1px solid rgba(255,255,255,0.1);
+    padding-top:14px;
+}
+.stat b{display:block;font-size:20px;font-weight:700;color:#fff;font-family:'Space Grotesk',sans-serif}
+.stat span{font-size:11px;color:rgba(255,255,255,0.5);margin-top:2px;display:block}
